@@ -1,7 +1,7 @@
 {
   "vendor": "vtex",
   "name": "adserver-graphql",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "title": "Adserver Graphql",
   "description": "Adserver Graphql",
   "credentialType": "absolute",
