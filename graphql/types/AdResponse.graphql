@@ -1,0 +1,45 @@
+type AdResponse {
+  """
+  Ad Request ID. If null, the ad request was not completed.
+  """
+  adRequestId: ID
+  """
+  Ad Response ID. If null, the ad request was not completed.
+  """
+  adResponseId: ID
+  """
+  List of sponsored products matching the query.
+  """
+  sponsoredProducts: [SponsoredProduct]
+}
+
+type SponsoredProduct {
+  """
+  ID of the sponsored product.
+  """
+  productId: ID
+  """
+  ID of the ad item associated with the sponsored product.
+  """
+  adId: ID
+  """
+  ID of the campaign owner of the ad item.
+  """
+  campaignId: ID
+
+  """
+  Cost of the goal action. E.g: CPC, cost per click.
+  """
+  actionCost: Float
+  """
+  Merchandising rule applied to the product.
+  """
+  rule: Rule
+}
+
+type Rule {
+  """
+  Rule ID.
+  """
+  id: String
+}
