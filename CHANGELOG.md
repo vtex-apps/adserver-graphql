@@ -7,5 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+- Change the response type of the `sponsoredProducts` query back to an array of products, adding the `advertisment` field into it.
+
 ## [1.0.0] - 2023-09-20
 
