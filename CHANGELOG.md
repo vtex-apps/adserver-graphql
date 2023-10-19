@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- Created the field `identifier`, which allow for different types of product identifiers such as SKU, VTEX ID and EAN.
+
 ### Changed
 
 - Change the response type of the `sponsoredProducts` query back to an array of products, adding the `advertisment` field into it.

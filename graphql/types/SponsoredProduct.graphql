@@ -1,8 +1,13 @@
 type SponsoredProduct {
   """
+  Unique identifier of the product. Can be SKU, EAN or VTEX Product ID.
+  """
+  identifier: ProductUniqueIdentifier
+
+  """
   ID of the sponsored product.
   """
-  productId: ID
+  productId: ID @deprecated(reason: "Use `identifier` instead.")
 
   """
   Merchandising rule applied to the product.
@@ -10,9 +15,32 @@ type SponsoredProduct {
   rule: Rule
 
   """
-  If this product is sponsored, ad information will be added here.
+  Sponsored campaign related information should be added here.
   """
   advertisement: Advertisement
+}
+
+type ProductUniqueIdentifier {
+  """
+  Product ID value. If null, consider SKU as the default.
+  """
+  field: ProductUniqueIdentifierField
+  """
+  Product ID value.
+  """
+  value: ID
+}
+
+enum ProductUniqueIdentifierField {
+  """
+  VTEX Product ID, unique to this account.
+  """
+  id
+
+  """
+  SKU ID, unique to each variation of a product such as size, color, etc.
+  """
+  sku
 }
 
 type Rule {
