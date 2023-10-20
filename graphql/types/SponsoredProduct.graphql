@@ -22,7 +22,7 @@ type SponsoredProduct {
 
 type ProductUniqueIdentifier {
   """
-  Product ID value. If null, consider SKU as the default.
+  Product ID value. If null, consider anyId as the default.
   """
   field: ProductUniqueIdentifierField
   """
@@ -33,14 +33,19 @@ type ProductUniqueIdentifier {
 
 enum ProductUniqueIdentifierField {
   """
+  Any ID, being SKU, EAN or VTEX Product ID. Keep in mind that multiple products can have equivalent SKU or Product ID.
+  """
+  anyId
+
+  """
   VTEX Product ID, unique to this account.
   """
-  id
+  product
 
   """
   SKU ID, unique to each variation of a product such as size, color, etc.
   """
-  sku
+  skuId
 }
 
 type Rule {
