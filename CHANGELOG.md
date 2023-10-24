@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.1.0] - 2023-10-24
+
 ### Added
 
 - Created the field `identifier`, which allow for different types of product identifiers such as SKU, VTEX ID and EAN.
