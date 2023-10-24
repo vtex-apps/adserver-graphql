@@ -1,0 +1,79 @@
+type SponsoredProduct {
+  """
+  Unique identifier of the product. Can be SKU, EAN or VTEX Product ID.
+  """
+  identifier: ProductUniqueIdentifier
+
+  """
+  ID of the sponsored product.
+  """
+  productId: ID @deprecated(reason: "Use `identifier` instead.")
+
+  """
+  Merchandising rule applied to the product.
+  """
+  rule: Rule
+
+  """
+  Sponsored campaign related information should be added here.
+  """
+  advertisement: Advertisement
+}
+
+type ProductUniqueIdentifier {
+  """
+  Product ID value. If null, consider anyId as the default.
+  """
+  field: ProductUniqueIdentifierField
+  """
+  Product ID value.
+  """
+  value: ID
+}
+
+enum ProductUniqueIdentifierField {
+  """
+  Any ID, being SKU, EAN or VTEX Product ID. Keep in mind that multiple products can have equivalent SKU or Product ID.
+  """
+  anyId
+
+  """
+  VTEX Product ID, unique to this account.
+  """
+  product
+
+  """
+  SKU ID, unique to each variation of a product such as size, color, etc.
+  """
+  skuId
+}
+
+type Rule {
+  """
+  Rule ID.
+  """
+  id: String
+}
+
+type Advertisement {
+  """
+  ID of the ad item associated with the sponsored product.
+  """
+  adId: ID
+  """
+  ID of the campaign owner of the ad item.
+  """
+  campaignId: ID
+  """
+  Cost of the goal action. E.g: CPC, cost per click.
+  """
+  actionCost: Float
+  """
+  Ad Request ID.
+  """
+  adRequestId: ID
+  """
+  Ad Response ID.
+  """
+  adResponseId: ID
+}
