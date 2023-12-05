@@ -59,7 +59,7 @@ type Query {
     """
     dynamicRules: [DynamicRuleInput]
     """
-    Identifier for users, logged or not.
+    Identifier for users, logged in or not. Used for A/B tests.
     """
     anonymousId: String
   ): [SponsoredProduct] @cacheControl(scope: PUBLIC, maxAge: SHORT)
