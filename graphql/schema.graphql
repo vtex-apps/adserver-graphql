@@ -58,5 +58,9 @@ type Query {
     Rules for pormoting, demoting, adding or removing products
     """
     dynamicRules: [DynamicRuleInput]
+    """
+    Identifier for users, logged in or not. Used for A/B tests.
+    """
+    anonymousId: String
   ): [SponsoredProduct] @cacheControl(scope: PUBLIC, maxAge: SHORT)
 }
