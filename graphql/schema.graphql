@@ -62,5 +62,9 @@ type Query {
     Identifier for users, logged in or not. Used for A/B tests.
     """
     anonymousId: String
+    """
+    Where the sponsored product in being shown. Used for analytics purposes.
+    """
+    placement: String
   ): [SponsoredProduct] @cacheControl(scope: PUBLIC, maxAge: SHORT)
 }
