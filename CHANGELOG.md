@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- `placement` input value.
+
 ## [0.2.0] - 2023-12-07
 
 ## [0.2.0] - 2023-12-05

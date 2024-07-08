@@ -9,7 +9,7 @@ type Query {
     """
     page: Int
     """
-    Number of items per page
+    Number of items per page. **Warning:** Use `sponsoredCount` to limit the number of sponsored products.
     """
     count: Int
     """
@@ -62,5 +62,13 @@ type Query {
     Identifier for users, logged in or not. Used for A/B tests.
     """
     anonymousId: String
+    """
+    Where the sponsored product in being shown. Used for analytics purposes.
+    """
+    placement: String
+    """
+    Maximum number of sponsored products that should be returned.
+    """
+    sponsoredCount: Int
   ): [SponsoredProduct] @cacheControl(scope: PUBLIC, maxAge: SHORT)
 }
