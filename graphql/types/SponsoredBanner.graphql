@@ -15,10 +15,6 @@ type AdvertisementBanner {
   """
   imageUrl: String
   """
-  Banner dimensions.
-  """
-  adUnit: String
-  """
   ID of the campaign owner of the ad item.
   """
   campaignId: ID
