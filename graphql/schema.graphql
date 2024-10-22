@@ -71,4 +71,10 @@ type Query {
     """
     sponsoredCount: Int
   ): [SponsoredProduct] @cacheControl(scope: PUBLIC, maxAge: SHORT)
+  sponsoredBanners(
+    """
+    Placement of the banner. Used for analytics purposes.
+    """
+    placement: String
+): [SponsoredBanner] @cacheControl(scope: PUBLIC, maxAge: SHORT)
 }
