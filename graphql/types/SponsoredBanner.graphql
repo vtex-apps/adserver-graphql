@@ -1,0 +1,33 @@
+type SponsoredBanner {
+  """
+  ID of the sponsored banner.
+  """
+  bannerId: ID
+  """
+  Sponsored campaign related information should be added here.
+  """
+  advertisement: AdvertisementBanner
+}
+
+type AdvertisementBanner {
+  """
+  URL of the image to be displayed in the ad.
+  """
+  imageUrl: String
+  """
+  ID of the campaign owner of the ad item.
+  """
+  campaignId: ID
+  """
+  Cost of the goal action. E.g: CPC, cost per click.
+  """
+  actionCost: Float
+  """
+  Ad Request ID.
+  """
+  adRequestId: ID
+  """
+  Ad Response ID.
+  """
+  adResponseId: ID
+}
