@@ -15,6 +15,10 @@ type AdvertisementBanner {
   """
   imageUrl: String
   """
+  URL to be redirected to when the ad is clicked.
+  """
+  targetUrl: String
+  """
   ID of the campaign owner of the ad item.
   """
   campaignId: ID
