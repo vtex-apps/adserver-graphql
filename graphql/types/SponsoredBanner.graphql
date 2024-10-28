@@ -19,19 +19,19 @@ type AdvertisementBanner {
   """
   targetUrl: String
   """
-  ID of the campaign owner of the ad item.
-  """
-  campaignId: ID
-  """
-  Cost of the goal action. E.g: CPC, cost per click.
-  """
-  actionCost: Float
-  """
-  Ad Request ID.
-  """
-  adRequestId: ID
-  """
   Ad Response ID.
   """
   adResponseId: ID
+  """
+  Banner Image ID.
+  """
+  bannerImageId: ID
+  """
+  Width of the banner in pixels.
+  """
+  width: Int
+  """
+  Height of the banner in pixels.
+  """
+  height: Int
 }
