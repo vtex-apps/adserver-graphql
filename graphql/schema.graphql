@@ -73,9 +73,9 @@ type Query {
   ): [SponsoredProduct] @cacheControl(scope: PUBLIC, maxAge: SHORT)
   sponsoredBanners(
     """
-    Identifier for users, logged in or not. Used for A/B tests.
+    Maximum number of sponsored banners that should be returned.
     """
-    anonymousId: String
+    sponsoredCount: Int
     """
     Placement of the banner. Used for analytics purposes.
     """
@@ -88,5 +88,9 @@ type Query {
     Channel where the banner is being shown. Used for analytics purposes.
     """
     channel: String
+    """
+    Identifier for users, logged in or not. Used for A/B tests.
+    """
+    anonymousId: String
   ): [SponsoredBanner] @cacheControl(scope: PUBLIC, maxAge: SHORT)
 }
