@@ -79,15 +79,15 @@ type Query {
     """
     Placement of the banner. Used for analytics purposes.
     """
-    placement: String
+    placement: Placement
     """
     Banner dimensions.
     """
-    adUnit: String
+    adUnit: AdUnit
     """
     Channel where the banner is being shown. Used for analytics purposes.
     """
-    channel: String
+    channel: Channel
     """
     Identifier for users, logged in or not. Used for A/B tests.
     """

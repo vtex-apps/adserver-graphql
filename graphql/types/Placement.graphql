@@ -1,0 +1,10 @@
+enum Placement {
+  top_search
+  middle_search
+  home_shelfpdp_shelf
+  search_shelf
+  cart_shelf
+  plp_shelf
+  autocomplete
+  homepage
+}
