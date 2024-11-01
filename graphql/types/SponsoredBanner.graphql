@@ -1,0 +1,33 @@
+type SponsoredBanner {
+  """
+  ID of the sponsored banner.
+  """
+  adResponseId: ID
+  """
+  Sponsored campaign related information should be added here.
+  """
+  advertisement: AdvertisementBanner
+}
+
+type AdvertisementBanner {
+  """
+  Banner Image ID.
+  """
+  bannerImageId: ID
+  """
+  URL of the image to be displayed in the ad.
+  """
+  imageUrl: String
+  """
+  URL to be redirected to when the ad is clicked.
+  """
+  targetUrl: String
+  """
+  Width of the banner in pixels.
+  """
+  width: Int
+  """
+  Height of the banner in pixels.
+  """
+  height: Int
+}

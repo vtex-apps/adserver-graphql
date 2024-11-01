@@ -71,4 +71,26 @@ type Query {
     """
     sponsoredCount: Int
   ): [SponsoredProduct] @cacheControl(scope: PUBLIC, maxAge: SHORT)
+  sponsoredBanners(
+    """
+    Maximum number of sponsored banners that should be returned.
+    """
+    sponsoredCount: Int
+    """
+    Placement of the banner. Used for analytics purposes.
+    """
+    placement: Placement
+    """
+    Banner dimensions.
+    """
+    adUnit: AdUnit
+    """
+    Channel where the banner is being shown. Used for analytics purposes.
+    """
+    channel: Channel
+    """
+    Identifier for users, logged in or not. Used for A/B tests.
+    """
+    anonymousId: String
+  ): [SponsoredBanner] @cacheControl(scope: PUBLIC, maxAge: SHORT)
 }

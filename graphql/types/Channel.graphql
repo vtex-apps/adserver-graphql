@@ -1,0 +1,7 @@
+enum Channel {
+  website
+  android
+  ios
+  msite
+  whatsapp
+}

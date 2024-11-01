@@ -1,0 +1,14 @@
+enum AdUnit {
+  billboard
+  smartphonebanner
+  leaderboard
+  superleaderboard
+  portrait
+  skyscraper
+  mediumrectangle
+  button120x60
+  mobilephoneinterstitial
+  featurephonesmallbanner
+  featurephonemediumbanner
+  featurephonelargebanner
+}
