@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+- Create query parameter `userId` and `sessionId` for `sponsoredProducts`.
+
 ## [0.3.1] - 2024-11-01
 
 ### Added
