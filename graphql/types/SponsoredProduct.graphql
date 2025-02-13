@@ -18,6 +18,11 @@ type SponsoredProduct {
   Sponsored campaign related information should be added here.
   """
   advertisement: Advertisement
+
+  """
+  Seller ID.
+  """
+  sellerId: ID
 }
 
 type ProductUniqueIdentifier {
