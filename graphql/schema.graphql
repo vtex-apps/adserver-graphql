@@ -78,6 +78,10 @@ type Query {
     Maximum number of sponsored products that should be returned.
     """
     sponsoredCount: Int
+    """
+    SKU identifier used to segment the ads.
+    """
+    skuId: String
   ): [SponsoredProduct] @cacheControl(scope: PUBLIC, maxAge: SHORT)
   sponsoredBanners(
     """
